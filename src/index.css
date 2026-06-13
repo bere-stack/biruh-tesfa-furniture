@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,300..900;1,300..900&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-space: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Premium Warm Gold Theme Palette */
+  --color-gold-50: #fbf9f1;
+  --color-gold-100: #f5eed3;
+  --color-gold-200: #ebdb9e;
+  --color-gold-300: #dec15f;
+  --color-gold-400: #d1a52f;
+  --color-gold-500: #bd871d;
+  --color-gold-600: #9e6414;
+  --color-gold-700: #7e4612;
+  --color-gold-800: #683713;
+  --color-gold-900: #572d13;
+
+  /* Luxury Dark Crimson / Deep Red Theme Palette */
+  --color-crimson-50: #fdf3f3;
+  --color-crimson-100: #fbe5e5;
+  --color-crimson-200: #f7cece;
+  --color-crimson-300: #efa6a6;
+  --color-crimson-400: #e17474;
+  --color-crimson-500: #ce4444;
+  --color-crimson-600: #b02a2a;
+  --color-crimson-700: #8c1e1e;
+  --color-crimson-800: #741c1c;
+  --color-crimson-900: #621b1b;
+}
+
+/* Custom global styling details */
+html, body {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar to look premium */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 30, 30, 0.2);
+  border-radius: 9999px;
+  border: 1px solid transparent;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(189, 135, 29, 0.2);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-crimson-500);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-400);
+}
+
+/* Custom overlay fading */
+.fade-overlay {
+  mask-image: linear-gradient(to top, transparent, black 15%, black 85%, transparent);
+}
+
+/* Custom selection highlight */
+::selection {
+  background-color: var(--color-gold-200);
+  color: var(--color-gold-900);
+}
+.dark ::selection {
+  background-color: var(--color-crimson-850);
+  color: var(--color-gold-100);
+}
+
